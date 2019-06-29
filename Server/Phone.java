@@ -9,15 +9,16 @@ public class Phone extends JFrame {
 	public JLabel intro = new JLabel("Waiting for connect...");
 	public JLabel time = new JLabel("0:00");
 	public int time_cnt = 0;
-	
+
 	public Connect con = null;
 	public Mic mic = null;
 	public Speaker spk = null;
-	
+
 	public AudioFormat format = 
-			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,22050,16,2,4,22050,false);
-	
-	public Phone(){
+			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 22050, 16, 2, 4, 16000, false);
+
+	public Phone() {
+		this.setSize(300,80);
 		this.setTitle("Server");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);

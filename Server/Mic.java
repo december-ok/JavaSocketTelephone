@@ -17,7 +17,7 @@ public class Mic extends Thread{
 			targetLine = (TargetDataLine) AudioSystem.getLine(info);
 			targetLine.open();
 			// System.out.println(targetLine.getBufferSize());
-			data = new byte[(int) (targetLine.getBufferSize() / 5)];
+			data = new byte[(int) (targetLine.getBufferSize() / 8000)];
 			System.out.println("Ready to use Mic");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -29,6 +29,7 @@ public class Mic extends Thread{
 			targetLine.open();
 			targetLine.start();
 			while (true) {
+				System.out.println(data.length);
 				targetLine.read(data, 0, data.length);
 				p.con.output.write(data, 0, data.length);
 				p.con.output.flush();
@@ -36,6 +37,7 @@ public class Mic extends Thread{
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.exit(0);
 		}
 	}
 }
