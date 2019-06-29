@@ -15,10 +15,10 @@ public class Phone extends JFrame {
 	public Speaker spk = null;
 
 	public AudioFormat format = 
-			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED,22050,16,2,4,22050,false);
-	
+			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 22050, 16, 2, 4, 16000, false);
 	
 	public Phone(){
+		this.setSize(300,80);
 		this.setTitle("Client");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(true);
