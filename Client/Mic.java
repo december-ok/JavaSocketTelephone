@@ -19,7 +19,7 @@ public class Mic extends Thread {
 			targetLine = (TargetDataLine) AudioSystem.getLine(info);
 			targetLine.open();
 			// System.out.println(targetLine.getBufferSize());
-			data = new byte[(int) (targetLine.getBufferSize() / 8000)];
+			data = new byte[(int) (targetLine.getBufferSize() / 5512)];
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
