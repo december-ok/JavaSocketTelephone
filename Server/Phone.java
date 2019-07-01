@@ -15,7 +15,7 @@ public class Phone extends JFrame {
 	public Speaker spk = null;
 
 	public AudioFormat format = 
-			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 22050, 16, 2, 4, 16000, false);
+			new AudioFormat(AudioFormat.Encoding.PCM_SIGNED, 11025, 16, 2, 4, 11025, false);
 
 	public Phone() {
 		this.setSize(300,80);
