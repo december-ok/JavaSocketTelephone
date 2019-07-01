@@ -15,7 +15,7 @@ public class Speaker extends Thread{
 			DataLine.Info info = new DataLine.Info(SourceDataLine.class, p.format);
 			sourceLine = (SourceDataLine) AudioSystem.getLine(info);
 			sourceLine.open();
-			data = new byte[(int) (sourceLine.getBufferSize() / 8000)];
+			data = new byte[(int) (sourceLine.getBufferSize() / 5512)];
 			System.out.println("Ready to use Speaker");
 		} catch (Exception e) {
 			e.printStackTrace();
